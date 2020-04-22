@@ -48,16 +48,14 @@ max_array という関数を実装しようとしています。
  }*/
 
 $x=array(3,7,5,8,9);
-//a1...元のコマンドを変更せず完成させる方法がわかりませんでした。失敗しています。
+//a1
 function max_array($arr){
     $max_number = $arr[0];
-    arsort($arr);
-    for($i=0;$i<count($arr);$i++){
-       foreach($arr as $a){
-        $a=$i;
-       }
+    foreach($arr as $a){
+        if($max_number<$a){
+            $max_number=$a;
+        }
     }
-    $i=$max_number;
     echo $max_number;
 }
 max_array($x);
